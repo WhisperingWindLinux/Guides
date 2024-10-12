@@ -10,11 +10,12 @@ Most laptop displays are internally connected via DisplayPort.
 
 I've developed and tested this on kernel 6.10 with Ubuntu 24.04.1 LTS, and while it should work on other versions, I'm not entirely certain about the minimum Ubuntu version that supports this kernel. 
 
-I haven't tested the build guide on other Debian-based operating systems, but in theory, it should work. If you're using a non-Debian based OS, you should look up a guide specific to building the kernel for your distribution.
+I haven't tested the build guide on other Debian-based operating systems, but in theory, it should work. If you're using a non-Debian based OS, you should look up a guide specific to building the kernel for your distro.
 
-X11 provides an easy way to switch color depth using xrandr. Other environments may not support color depth selection, such as Wayland.
+X11 provides an easy way to switch color depth using xrandr. Other environments may not support color depth selection, such as Wayland. Please use X11.
 
 The fix has been tested on the Intel Alder Lake UHD 48EU (Xe) i5-12450H and the Intel Arc A770, but in theory, it should work for all Intel iGPUs/GPUs.
+
 ## How to build the kernel
 
 This is not the most comprehensive guide for building a kernel. For example, it omits issues related to digital signatures. However, what is described here is a minimally functional version that will allow you to build and use a new kernel.
