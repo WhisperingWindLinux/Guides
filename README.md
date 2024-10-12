@@ -18,7 +18,7 @@ The fix has been tested on the Intel Alder Lake UHD 48EU (Xe) i5-12450H and the 
 
 ## How to build the kernel
 
-This is not the most comprehensive guide for building a kernel. For example, it omits issues related to digital signatures. It means that the kernel is not signed and will not boot with Secure Boot enabled. Secure Boot is an option in the BIOS/UEFI settings. **I don't know if disabling Secure Boot (this is the BIOS/UEFI option) will cause any problems if you already have some operating systems previously installed with this option enabled.**
+This is not the most comprehensive guide for building a kernel. For example, it omits issues related to digital signatures. It means that the kernel is not signed and will not boot with Secure Boot enabled. Secure Boot is an option in the BIOS/UEFI settings. **I don't know if disabling Secure Boot will cause any problems if you already have some operating systems previously installed with this option enabled.**
 
 **1) Before starting the build, you need to install dependencies and tools for building**
 
