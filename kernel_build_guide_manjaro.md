@@ -23,11 +23,14 @@ fallback_options=“-S autodetect”
 
 2) Installing dependencies:
 
+```bash
 sudo pacman -Sy
 sudo pacman -S mc gcc make flex bison cpio bison meson llvm14 python-mako pkg-config cmake python-packaging python-setuptools
+```
 
 3) Building the kernel (you can keep the default configuration and save it as is):
 
+```bash
 zcat /proc/config.gz >> .config
 make menuconfig
 make -j$(nproc)
@@ -35,7 +38,9 @@ sudo make modules_install
 sudo make install
 sudo cp /boot/vmlinuz /boot/vmlinuz-6.10-x86_64
 sudo mkinitcpio -p linux610
+```
 
 4) Rebooting, we need to make sure the new kernel is loaded, this can be done with the command
-
+```bash
 uname -a
+```
