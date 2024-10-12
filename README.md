@@ -79,7 +79,7 @@ The result of the command should be:
 
 ## How to switch to 6-bit mode
 
-Note: xrandr uses X11, so it will not work fully in other environments. For example, the Wayland architecture does not allow changing the color depth in the OS as easily.
+Note: xrandr uses X11, so it will not work fully in other environments.
 
 You can switch to 6-bit mode with the command:
 
