@@ -4,14 +4,17 @@
 
 This solution is particularly useful if you have a 6-bit+FRC monitor and you want to experiment with the 6-bit mode. For 8-bit color depth and above, this fix is not needed because Intel iGPU/GPU dithering is not present.
 
-Please note that your monitor should be connected via DisplayPort to your Intel iGPU/GPU. There are some exceptions, such as Intel Arc, where the HDMI port might internally route through DisplayPort. Similarly, some motherboards may have a similar design for the iGPU, but this is relatively rare.
+Please note that your monitor should be connected via DisplayPort to your Intel iGPU/GPU. There are some exceptions, such as Intel Arc, where the HDMI port internally route through DisplayPort. Similarly, some motherboards may have a similar design for the iGPU, but this is relatively rare.
 
-I've developed and tested this on kernel 6.10 with Ubuntu 24.04.1 LTS, and while it should work on other versions, I'm not entirely certain about the minimum Ubuntu version that supports this kernel. I haven't had the opportunity to test it on other Debian-based operating systems, but in theory, it should work. If you're using a non-Debian based OS, you should look up a guide specific to building the kernel for your distribution.
+Most laptop displays are internally connected via DisplayPort.
+
+I've developed and tested this on kernel 6.10 with Ubuntu 24.04.1 LTS, and while it should work on other versions, I'm not entirely certain about the minimum Ubuntu version that supports this kernel. 
+
+I haven't tested the build guide on other Debian-based operating systems, but in theory, it should work. If you're using a non-Debian based OS, you should look up a guide specific to building the kernel for your distribution.
 
 X11 provides an easy way to switch color depth using xrandr. Other environments may not support color depth selection, such as Wayland.
 
 The fix has been tested on the Intel Alder Lake UHD 48EU (Xe) i5-12450H and the Intel Arc A770, but in theory, it should work for all Intel iGPUs/GPUs.
-
 ## How to build the kernel
 
 This is not the most comprehensive guide for building a kernel. For example, it omits issues related to digital signatures. However, what is described here is a minimally functional version that will allow you to build and use a new kernel.
