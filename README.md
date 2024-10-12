@@ -102,7 +102,7 @@ Monitors: 1
 
 ## If you feel that the brightness of the white field is straining your eyes
 
-Try switching between Limited Range / Full Range and decide which one is better
+Try switching between Limited Range / Full Range
 
 ```bash
 xrandr --output DISPLAY_NAME --set "Broadcast RGB" "Limited 16:235"
