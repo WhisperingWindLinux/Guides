@@ -1,20 +1,16 @@
 # This guide contains a description of applying the fix that disables dithering in 6-bit mode for Intel iGPU/GPU in Linux
 
-## This is very important information, do not skip this section!
+## Foreword (this is really important, please don't skip this section)
 
-The i915 module in the Linux kernel is responsible for managing Intel iGPU/GPU. Dithering is disabled here for modes of 8 bits and above, but for 6-bit mode, it is enabled (spatial dithering). 
-This fix disables dithering in 6-bit mode. This fix may be useful only for those who use 6bit+FRC monitors and want to enable 6-bit in Linux, as spatial dithering can lead to more active FRC module operation on the monitor and cause eye strain in 6-bit mode.</p>
-**The monitor must be connected via DisplayPort to your Intel iGPU/GPU. Exceptions may include Intel Arc, where the HDMI port is routed internally through DisplayPort. Alternatively, your motherboard might be designed similarly for the iGPU, but this is unlikely.**</p>
-**X11 provides an easy way to switch between 6, 8, 10, etc., bit modes using the xrandr command. Other environments may not support color depth selection (for example, Wayland). Use X11.**
+This solution is particularly useful if you have a 6-bit+FRC monitor and you want to experiment with the 6-bit mode. 
 
-The fix have been made in linux kernel version 6.10. I haven't checked the minimum version of the distro required for this kernel. But if you want to try building a different version of the kernel, you'll need [these changes in your kernel version](https://github.com/WhisperingWindLinux/linux/commit/fba72946743be6f30d426db3eb17b1f4ff6af509). Alternatively, you can ask me to apply the changes to the kernel version you need on the forum.
+Please note that your monitor should be connected via DisplayPort to your Intel iGPU/GPU. There are some exceptions, such as Intel Arc, where the HDMI port might internally route through DisplayPort. Similarly, some motherboards may have a similar design for the iGPU, but this is relatively rare.
 
-This guide has been tested on Ubuntu 24.04.1 LTS. In theory, it should work on other Debian-based distros, but I haven't tested it in practice.
-If your distro is not based on Debian, some of the commands presented here will not work. You will need to find a kernel compilation guide for your distro.
+I've developed and tested this on kernel 6.10 with Ubuntu 24.04.1 LTS, and while it should work on other versions, I'm not entirely certain about the minimum Ubuntu version that supports this kernel. I haven't had the opportunity to test it on other Debian-based operating systems, but in theory, it should work. If you're using a non-Debian based OS, you should look up a guide specific to building the kernel for your distribution.
 
-The fix has been tested on Intel Alder Lake UHD 48EU (Xe) i5-12450h and Intel Arc A770, but it should work for all Intel iGPU/GPU. However, for understandable reasons, there is no 100% guarantee here.
+X11 provides an easy way to switch color depth using xrandr. Other environments may not support color depth selection, such as Wayland.
 
-**This fix, unfortunately, does not guarantee that eye strain will stop during work, as iGPU/GPU dithering is not the only cause.**
+The fix has been tested on the Intel Alder Lake UHD 48EU (Xe) i5-12450H and the Intel Arc A770, but in theory, it should work for all Intel iGPUs/GPUs.
 
 ## How to build the kernel
 
