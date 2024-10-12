@@ -152,4 +152,6 @@ My result is [0x00800140](https://www.rapidtables.com/convert/number/hex-to-bina
 
 The 5th bit from the right is 0, meaning dithering is not present. If it is equal to 1, then dithering is present.
 
+Link to the Intel manual where you can find information on registers (including PIPE_MISC, which we worked with above: https://cdrdv2-public.intel.com/703047/intel-gfx-prm-osrc-tgl-vol-02-c-command-reference-registers-part-2.pdf, page 688).
+
 Note: If you do not have Intel Arc or Intel UHD (11th generation and above), but you want to perform a similar experiment, ask a question on the forum. The community can help find the register address and its format for your Intel iGPU. However, this step is not necessary for building the kernel.
