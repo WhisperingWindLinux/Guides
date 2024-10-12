@@ -2,7 +2,7 @@
 
 ## Foreword (this is really important, please don't skip this section)
 
-This solution is particularly useful if you have a 6-bit+FRC monitor and you want to experiment with the 6-bit mode. 
+This solution is particularly useful if you have a 6-bit+FRC monitor and you want to experiment with the 6-bit mode. For 8-bit color depth and above, this fix is not needed because Intel iGPU/GPU dithering is not present.
 
 Please note that your monitor should be connected via DisplayPort to your Intel iGPU/GPU. There are some exceptions, such as Intel Arc, where the HDMI port might internally route through DisplayPort. Similarly, some motherboards may have a similar design for the iGPU, but this is relatively rare.
 
