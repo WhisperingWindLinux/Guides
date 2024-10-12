@@ -18,9 +18,8 @@ The fix has been tested on the Intel Alder Lake UHD 48EU (Xe) i5-12450H and the 
 
 ## How to build the kernel
 
-This is not the most comprehensive guide for building a kernel. For example, it omits issues related to digital signatures However, what is described here is a minimally functional version that will allow you to build and use a new kernel.
-
-**Warning: this kernel is not signed and will not boot with Secure Boot disabled (BIOS/UEFI). It's not clear about Secure Boot. Opinions vary; some say that if you disable it, Windows 11 won't boot. So, this issue hasn't been fully addressed yet. If you had Secure Boot disabled before, you can build and use a custom kernel. If it's enabled and Windows is installed, I'm not sure yet whether it can be safely disabled and then re-enabled.**
+This is not the most comprehensive guide for building a kernel. For example, it omits issues related to digital signatures. It means that the kernel is not signed and will not boot with Secure Boot enabled (BIOS/UEFI). **I don't know if it's safe to disable Secure Boot (BIOS/UEFI option) if you already have it previously installed with this option.**
+However, what is described here is a minimally functional version that will allow you to build and use a new kernel. 
 
 **1) Before starting the build, you need to install dependencies and tools for building**
 
