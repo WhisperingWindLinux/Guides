@@ -120,7 +120,7 @@ xrandr --output DISPLAY_NAME --brightness VALUE
 
 where VALUE is the brightness level; the default value is 1, but you can set other values. Decimal values are specified with a dot, for example, 0.9.
 
-Adjusting Gamma
+Try adjusting gamma
 
 ```bash
 xrandr --output DISPLAY_NAME --gamma R:G:B
