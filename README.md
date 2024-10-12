@@ -37,8 +37,14 @@ git clone --depth 1 --branch 6bit_nodither_v610 https://github.com/WhisperingWin
 
 ```bash
 cd linux
-cat /boot/config-$(uname -r) >> .config 
+```
+```bash
+cat /boot/config-$(uname -r) >> .config
+```
+```bash
 make menuconfig  # In the opened "window," the sequence of buttons is "Save – OK – Exit – Exit," meaning we save the configuration without changing anything and exit.
+```
+```bash
 scripts/config --disable SYSTEM_TRUSTED_KEYS
 scripts/config --disable SYSTEM_REVOCATION_KEYS
 ```
@@ -47,7 +53,11 @@ scripts/config --disable SYSTEM_REVOCATION_KEYS
 
 ```bash
 make -j$(nproc)  # For any questions from the builder that appear in the terminal, press "Enter"
+```
+```bash
 sudo make modules_install
+```
+```bash
 sudo make install
 ```
 
