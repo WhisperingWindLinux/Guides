@@ -18,7 +18,7 @@ The fix has been tested on the Intel Alder Lake UHD 48EU (Xe) i5-12450H and the 
 
 ## How to build the kernel
 
-This is not the most comprehensive guide for building a kernel. For example, it omits issues related to digital signatures; you should disable Secure Boot in BIOS/UEFI to load this kernel. However, what is described here is a minimally functional version that will allow you to build and use a new kernel.
+This is not the most comprehensive guide for building a kernel. For example, it omits issues related to digital signatures However, what is described here is a minimally functional version that will allow you to build and use a new kernel.
 
 **1) Before starting the build, you need to install dependencies and tools for building**
 
