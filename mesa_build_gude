@@ -1,0 +1,16 @@
+Ubuntu 24.04.1 LTS
+
+git clone --depth 1 --branch 24.01_nodither https://github.com/WhisperingWindLinux/Mesa.git
+
+sudo cp '/usr/lib/llvm-17/lib/clang/17/include/opencl-c-base.h' /usr/local/include/
+sudo cp '/usr/lib/llvm-17/lib/clang/17/include/opencl-c.h' /usr/local/include/
+
+sudo apt  install cmake
+sudo apt-get build-dep mesa
+sudo apt install libllvmspirvlib-18-dev
+sudo apt install libclang-dev
+sudo apt install cbindgen
+
+meson setup builddir/
+meson compile -C builddir/
+sudo meson install -C builddir/
