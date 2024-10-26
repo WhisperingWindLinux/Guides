@@ -10,6 +10,25 @@ sudo apt-get build-dep mesa
 sudo apt install libllvmspirvlib-18-dev
 sudo apt install libclang-dev
 sudo apt install cbindgen
+sudo apt-get install libgraphene-1.0-dev
+sudo apt-get install libgdk-pixbuf2.0-dev
+sudo apt-get install libpango1.0-dev
+sudo apt install gsettings-desktop-schemas-dev
+sudo apt install libxkbcommon-dev
+sudo apt install libatk1.0-dev
+sudo apt install libdbus-1-dev
+sudo apt install libcolord-dev
+sudo apt install liblcms2-dev libeis-dev
+sudo apt-get install libgtk-4-dev libxtst-dev  libxkbfile-dev libxkbcommon-x11-dev libxcb-res0-dev
+     
+
+
+
+     
+
+     
+
+     
 
 meson setup builddir/
 meson compile -C builddir/
