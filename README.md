@@ -133,7 +133,7 @@ xrandr --output DISPLAY_NAME --gamma RGB
 Here you can set individual values for each component (R, G, B) or one value for all at once. The default value is 1; decimal values are specified with a dot, for example, 0.9.
 
 
-## How to check if dithering is present or not
+## How to check if dithering is present or not (1)
 
 For Intel Arc and Intel UHD (11th generation and above), you can check for dithering by reading register 0x70030. In fact, it might be a different register if you have multiple monitors, but for simplicity, you should have only one monitor connected to the graphics card while reading the register.
 
@@ -155,3 +155,19 @@ The 5th bit from the right is 0, meaning dithering is not present. If it is equa
 Link to the Intel manual where you can find information on registers (including PIPE_MISC, which we worked with above: https://cdrdv2-public.intel.com/703047/intel-gfx-prm-osrc-tgl-vol-02-c-command-reference-registers-part-2.pdf, page 688).
 
 Note: If you do not have Intel Arc or Intel UHD (11th generation and above), but you want to perform a similar experiment, ask a question on the forum. The community can help find the register address and its format for your Intel iGPU. However, this step is not necessary for building the kernel.
+
+## How to check if dithering is present or not (2)
+
+Run the command
+
+```bash
+sudo cat /sys/kernel/debug/dri/1/i915_display_info
+```
+
+in the terminal. The command will output a lot of data, but among it, there should be information about the presence of dithering
+
+dither=yes|no
+
+1 is the device number, which can be obtained through
+
+inxi -G
