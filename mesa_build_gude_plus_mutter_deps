@@ -20,14 +20,9 @@ sudo apt install libdbus-1-dev
 sudo apt install libcolord-dev
 sudo apt install liblcms2-dev libeis-dev
 sudo apt-get install libgtk-4-dev libxtst-dev  libxkbfile-dev libxkbcommon-x11-dev libxcb-res0-dev
-     
-
-
-
-     
-
-     
-
+sudo apt-get install libgnome-desktop-4-dev libcanberra-dev libgudev-1.0-dev libinput-dev libstartup-notification0-dev libpipewire-0.3-dev      
+sudo apt-get install libgirepository1.0-dev libspice-client-gtk-3.0-dev python3-dbusmock xvfb-run
+sudo apt-get install libunwind-dev
      
 
 meson setup builddir/
