@@ -55,7 +55,7 @@ scripts/config --disable SYSTEM_REVOCATION_KEYS
 make -j$(nproc)  # For any questions from the builder that appear in the terminal, press "Enter"
 ```
 ```bash
-sudo make modules_install
+sudo make modules_install  # TBD https://unix.stackexchange.com/questions/270390/how-to-reduce-the-size-of-the-initrd-when-compiling-your-kernel
 ```
 ```bash
 sudo make install
