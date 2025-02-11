@@ -54,14 +54,25 @@ scripts/config --disable SYSTEM_REVOCATION_KEYS
 ```bash
 make -j$(nproc)  # For any questions from the builder that appear in the terminal, press "Enter"
 ```
+
+**5) [OPTIONAL] Change the configuration of your initramfs.conf to reduce the size of the initrd when compiling your kernel**
+
+Find the file at /etc/initramfs-tools/initramfs.conf. There is a setting that says MODULES=most this includes most of the modules in your initrd image. Change it to MODULES=dep this makes the initramfs generator guess which modules to include.
+
+When you set MODULES=dep, the initramfs generator will include only the kernel modules that are required for your specific hardware configuration (dependencies). This means it will try to "guess" which modules are strictly necessary for booting your system, such as modules for your storage device, filesystem, and other essential hardware. This approach minimizes the size of the initramfs image because it excludes unnecessary modules, resulting in faster boot times and less memory usage during the early stages of boot. 
+
+In some cases, this may be necessary to avoid an out of memory error when loading the kernel. I have encountered this error a couple of times, so I try to follow the instructions in this section every time.
+
+**6) Installing the kernel and kernel modules**
+
 ```bash
-sudo make modules_install  # TBD https://unix.stackexchange.com/questions/270390/how-to-reduce-the-size-of-the-initrd-when-compiling-your-kernel
+make INSTALL_MOD_STRIP=1 modules_install
 ```
 ```bash
 sudo make install
 ```
 
-**5) Restart**
+**7) Restart**
 
 If you select "Advanced option for Ubuntu" in the boot menu, you will see the option to boot kernel 6.10.0+. Choose it. After booting, check that the correct kernel has loaded with the command:
 
