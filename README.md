@@ -30,7 +30,7 @@ sudo apt install git libncurses-dev gawk flex bison openssl libssl-dev dkms libe
 **2) Download the modified kernel code**
 
 ```bash
-git clone --depth 1 --branch 6bit_nodither_v610 https://github.com/WhisperingWindLinux/linux.git
+git clone --depth 1 --branch 6bit_nodither_v610 https://github.com/WhisperingWindLinux/linux-orig.git
 ```
 
 **3) The kernel configuration before building**
