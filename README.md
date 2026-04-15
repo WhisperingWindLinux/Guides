@@ -2,13 +2,15 @@
 
 ## Foreword (this is really important, please don't skip this section)
 
+!!! The fix has been ported to kernel 6.19. It has not been tested yet !!!
+
 This solution is particularly useful if you have a 6-bit+FRC monitor and you want to experiment with the 6-bit mode. For 8-bit color depth and above, this fix is not needed because Intel iGPU/GPU dithering is not present.
 
 Please note that your monitor should be connected via DisplayPort to your Intel iGPU/GPU. There are some exceptions, such as Intel Arc, where the HDMI port internally route through DisplayPort. Similarly, some motherboards may have a similar design for the iGPU, but this is relatively rare.
 
 Most laptop displays are internally connected via DisplayPort.
 
-I've developed and tested this on kernel 6.10 with Ubuntu 24.04.1 LTS, and while it should work on other versions, I'm not entirely certain about the minimum Ubuntu version that supports this kernel. 
+I've developed and tested this on kernel 6.19 with Ubuntu 24.04.1 LTS, and while it should work on other versions, I'm not entirely certain about the minimum Ubuntu version that supports this kernel. 
 
 I haven't tested the build guide on other Debian-based operating systems, but in theory, it should work. If you're using a non-Debian based OS, you should look up a guide specific to building the kernel for your distro.
 
@@ -30,7 +32,7 @@ sudo apt install git libncurses-dev gawk flex bison openssl libssl-dev dkms libe
 **2) Download the modified kernel code**
 
 ```bash
-git clone --depth 1 --branch 6bit_nodither_v610 https://github.com/WhisperingWindLinux/linux-orig.git
+git clone --depth 1 --branch 6bit_nodither https://github.com/WhisperingWindLinux/linuх.git
 ```
 
 **3) The kernel configuration before building**
@@ -83,7 +85,7 @@ uname -r
 The result of the command should be:
 
 ```bash
-6.10.0+
+6.19
 ```
 
 # Useful commands
