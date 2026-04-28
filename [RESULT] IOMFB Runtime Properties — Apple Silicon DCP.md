@@ -5,6 +5,7 @@
 **Sources:**
 - **Table A** (priority): experimental data — External/Internal statuses (`✅/❌/⚠️`)
 - **Table B**: names and descriptions from DCP firmware binary (indices may shift)
+
 **Status legend:**
 - ✅ = Working (status 0)
 - ❌ = Not found (status 4)
