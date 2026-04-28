@@ -207,22 +207,3 @@ The following entries require manual verification — names in tables do not mat
 | 101 | `SkipRegion` | `midporchRegion` | Unlikely to be the same, or shift |
 | 106 | `IOMFBSupportsHDR10Plus` | `supportHDR` | Different names, likely the same property |
 | 116 | `IOMFBTestBacklightDimValue` | `PCCNormBrightOut` | Completely different names — possible shift in B |
-
-## BVD Properties (Summary)
-
-| Priority | ID | Name | External | Internal | Recommended Value | Expected Effect |
-|-----------|----|-----|----------|----------|-----------------------|-----------------|
-| 🔴 Critical | **21** | `enableDither` | ✅ | ✅ | **0** | Eliminates temporal dithering flicker |
-| 🟠 High | **12** | `enableGammaCorrection` | ❌ | ❌ | 0 | Reduces processing artifacts (not found) |
-| 🟠 High | **108** | `enablePCC` | ❌ | ✅ | 0 | Reduces EMI from power circuitry (Internal only) |
-| 🟠 High | **118** | `BLMAHOutputFreq` | ❌ | ✅ | — | PWM frequency change (Internal only) |
-| 🟡 Medium | **22** | `enableDarkEnhancer` | ❌ | ✅ | 0 | Reduces noise in dark areas (Internal only) |
-| 🟡 Medium | **35** | `enableGamutMapper` | ❌ | ❌ | 0 | Simplifies color pipeline (not found) |
-| 🟡 Medium | **61** | *(unknown)* ~`disableDisplayOptimize` | ✅ | ✅ | 1 | Disables hidden processing |
-| 🟢 Lower | **100** | *(unknown)* ~`limitRefreshRate` | ✅ | ✅ | 60 | Locks to 60Hz |
-| 🟢 Lower | **114** | `DisableTempComp` | ❌ | ❌ | 1 | Disables thermal correction (not found) |
-| 🟢 Lower | **153** | `limit_max_physical_brightness` | ❌ | ❌ | low | Reduces peak brightness (not found) |
-
----
-
-*Table A indices (experimental) — source of truth. Names and descriptions from Table B are matched by name match or presumed by order (`~`). Properties from Table A with IDs 164–177 are absent from Table B — likely added after the binary version or specific to this firmware.*
