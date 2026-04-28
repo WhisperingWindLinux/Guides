@@ -18,8 +18,7 @@
 |--------|---------|----------|----------|---------|-------------|-------------|------------|
 | 0 | `BlendOutputCSCMethod` | ✅ | ✅ | `blendOutCSCMethod` | Color conversion method after layer blending | — | |
 | 1 | `CMDegammaMethod` | ✅ | ✅ | `CMDegammaMethod` | Gamma processing method before blending | — | |
-| 2 | `requestPixelBacklightModulation` | ❌ | ✅ | `requestPixelBacklightModulation` | Hint to allow pixel-level temporal/spatial luminance modulation
-   (likely tied to dithering or power optimization) | — | Internal only |
+| 2 | `requestPixelBacklightModulation` | ❌ | ✅ | `requestPixelBacklightModulation` | Hint to allow pixel-level temporal/spatial luminance modulation (likely tied to dithering or power optimization) | — | Internal only |
 | 3 | `forcePixelBacklightModulation` | ❌ | ✅ | `pixelBacklightModulationForceState` | Forces that modulation mode on/off, overriding DCP policy | — | Internal only |
 | 4 | `overrideLPFControls` | ❌ | ❌ | `DPBDriverOverrideLPFControls` | Overrides backlight driver low-pass filter | — | Not found on either |
 | 5 | `LPFControlValue` | ❌ | ❌ | `DPBDriverLPFControlValue` | Backlight filter smoothing value | — | Not found on either |
